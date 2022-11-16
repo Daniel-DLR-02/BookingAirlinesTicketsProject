@@ -35,5 +35,10 @@ public class TravelServiceImpl implements TravelService {
     public Travel saveTravel(Travel travel) {
         return travelRepos.save(travel);
     }
+
+    @Override
+    public List<Travel> getAllTravels() {
+        return travelRepos.findAll();
+    }
     
 }

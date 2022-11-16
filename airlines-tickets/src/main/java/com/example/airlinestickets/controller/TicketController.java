@@ -15,14 +15,10 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/ticket")
 @RequiredArgsConstructor
-public class Presentation {
+public class TicketController {
     
     private final TravelService travelService;
 
-    @PostMapping("/getDestinations")
-    public ResponseEntity<List<String>> getDestinations(@RequestBody List<String> origins){
-        return ResponseEntity.ok(travelService.getDestinations(origins));
-    }
 
 
 }

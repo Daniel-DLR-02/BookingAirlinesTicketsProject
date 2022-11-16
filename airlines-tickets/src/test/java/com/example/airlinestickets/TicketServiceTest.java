@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.example.airlinestickets.model.Travel;
 import com.example.airlinestickets.model.Traveller;
 import com.example.airlinestickets.model.Dto.TicketDto;
+import com.example.airlinestickets.service.TicketService;
 
 @SpringBootTest
 public class TicketServiceTest {   
@@ -34,6 +35,6 @@ public class TicketServiceTest {
 
     @Test
     void givingPlaceDataAndTravelerData_throwsNewTicket(){
-        assertEquals(ticketService.onCreateTicket(traveller,travel),new TicketDto("Pepe perez","Sevilla","Barcelona","Iberia","2:30-4:30"))
+        assertEquals(ticketService.createTicket(traveller,travel),new TicketDto("Pepe perez","Sevilla","Barcelona","Iberia","2:30-4:30"))
     }
 }

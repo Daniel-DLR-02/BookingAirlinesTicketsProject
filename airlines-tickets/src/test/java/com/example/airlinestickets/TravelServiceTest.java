@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class TravelServiceTest {
 
-    TravelService travelService;
+    static TravelService travelService;
 
     @Test
     void reciveFiveOrigins_ThrowsFiveDestination(){
