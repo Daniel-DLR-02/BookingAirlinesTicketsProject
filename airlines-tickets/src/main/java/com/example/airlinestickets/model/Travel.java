@@ -2,10 +2,7 @@ package com.example.airlinestickets.model;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,6 +18,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Builder
+@Table(name="travel")
 public class Travel {
 
     @Id
@@ -28,6 +26,7 @@ public class Travel {
     private Long id;
     
     private String airlineName;
+    @Column(name = "depart_location")
     private String departLocation;
     private String destinyLocation;
     private String scales;
