@@ -26,6 +26,11 @@ public class TravelController {
         return ResponseEntity.ok(travelService.getDestinations(origins));
     }
 
+    @GetMapping("/allOrigins")
+    public ResponseEntity<List<String>> getAllDestinations(){
+        return ResponseEntity.ok(travelService.getPosibleOrigins());
+    }
+
     @GetMapping("/getTravels")
     public ResponseEntity<List<Travel>> getTravels(){
         return ResponseEntity.ok(travelService.getAllTravels());

@@ -45,5 +45,10 @@ public class TravelServiceImpl implements TravelService {
     public List<Travel> getAllTravels() {
         return travelRepos.findAll();
     }
-    
+
+    @Override
+    public List<String> getPosibleOrigins() {
+        return travelRepos.getAllOrigins();
+    }
+
 }

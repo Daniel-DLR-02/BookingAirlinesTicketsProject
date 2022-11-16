@@ -10,6 +10,8 @@ public interface TravelService {
 
     List<Travel> getAllTravels();
 
+    List<String> getPosibleOrigins();
+
     Travel saveTravel(Travel travel);
     
 }
