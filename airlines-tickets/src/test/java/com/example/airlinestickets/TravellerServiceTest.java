@@ -23,9 +23,9 @@ public class TravellerServiceTest {
     
 	/*@Test
 	void validationTravellerName() {
-        assertNotNull(dataValidator.name(traveller.getNameAndSurname()), "El nombre tiene que tener más de un caracter");
+        assertNotNull(dataValidator.name(traveller.getNameAndSurname()), "Debe haber seleccionado al menos 5 destinos.");
 	}
-    
+
 	@Test
 	void validationTravellerNationality() {
         assertNotNull(dataValidator.nationality(traveller.getNationality()), "El viajero tiene que tener una nacionalidad");
@@ -38,7 +38,7 @@ public class TravellerServiceTest {
     
 	@Test
 	void validationTravellerAge() {
-        assertNotNull(dataValidator.age(traveller.getAge()), "El viajero tiene que tener una edad valida");*/
-	}
+        assertNotNull(dataValidator.age(traveller.getAge()), "El viajero tiene que tener una edad valida");
+	}*/
     
 }
