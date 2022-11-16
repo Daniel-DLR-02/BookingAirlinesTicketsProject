@@ -1,11 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { of } from "rxjs";
+import axios from "axios";
 
 const OriginForm = ({outputDestination, ...props}) => {
 
     const [ posibleOriginsColl, setPosibleOriginsColl ] = useState(["Málaga","Sevilla"]);
     const [ originColl, setOriginColl ] = useState([]);
     const [ newOrigin, setNewOrigin ] = useState(posibleOriginsColl[0]);
+
+    const [ post, setPost] = useState(null);
+
+    useEffect(() => {
+      axios.get(`http://localhost:8081/travels/allOrigins`).then((response) => {
+        console.log(response);
+        // setPost(response.data);
+      });
+    }, []);
     
 
     const originChangeHandler = (event) => {
@@ -39,7 +49,8 @@ const OriginForm = ({outputDestination, ...props}) => {
     } 
 
     return (
-        <div  class="card row" >
+        <div  class="card row mt-3" >
+            <h3>Origines</h3>
             <div class="card col-3">
                 <div class="card-body">
                     <form onSubmit={addToOrigin}>

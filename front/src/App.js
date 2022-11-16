@@ -5,16 +5,24 @@ import { of } from "rxjs";
 
 import OriginForm from './components/OriginForm';
 import PossibleDestinations from "./components/PossibleDestinations";
+import TypeOfTrip from "./components/TypeOfTrip";
 
 function App() {
   
   const [ originFormVisible, setOriginFormVisible ] = useState(true);
   const [ destinationCollVisible, setDestinationCollVisible ] = useState(false);
+  const [ typeOfTrip, setTypeOfTrip ] = useState(false);
  
   const outputDestination = () => {
 
     setOriginFormVisible(false)
+    setDestinationCollVisible(true)
 
+  }
+
+  const showTypeOfTrip = () => {
+
+    setTypeOfTrip(true)
 
   }
 
@@ -23,8 +31,16 @@ function App() {
 
       <main>
         
-        {/* { originFormVisible ? <OriginForm outputDestination={outputDestination} /> : <PossibleDestinations />} */}
-        <PossibleDestinations />
+        <OriginForm outputDestination={outputDestination} /> 
+
+        { destinationCollVisible && (
+          <PossibleDestinations showTypeOfTrip={showTypeOfTrip} />
+        )}
+
+        { typeOfTrip && (
+          <TypeOfTrip />
+        )}
+
 
       </main>
 
