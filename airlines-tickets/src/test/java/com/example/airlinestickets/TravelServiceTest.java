@@ -1,5 +1,6 @@
 package com.example.airlinestickets;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -54,7 +55,7 @@ public class TravelServiceTest {
         Travel travelPrueba = Travel.builder()
                 .airlineName("iberia")
                 .departLocation("Sevilla")
-                .travelDate(new Date(2022,10,22))
+                .travelDate(LocalDate.of(2022,10,22))
                 .schedule("3:30-4:30")
                 .scales("323")
                 .whether("rainy")

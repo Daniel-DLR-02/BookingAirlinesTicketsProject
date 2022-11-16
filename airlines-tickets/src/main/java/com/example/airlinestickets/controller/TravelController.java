@@ -2,6 +2,7 @@ package com.example.airlinestickets.controller;
 
 import java.util.List;
 
+import com.example.airlinestickets.model.Dto.TravelFilterQuery;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +35,11 @@ public class TravelController {
     @GetMapping("/getTravels")
     public ResponseEntity<List<Travel>> getTravels(){
         return ResponseEntity.ok(travelService.getAllTravels());
+    }
+
+    @PostMapping("/getFiltered")
+    public ResponseEntity<List<Travel>> getFilteredTravels(@RequestBody TravelFilterQuery travelQuery){
+        return ResponseEntity.ok(travelService.filterTravels(travelQuery));
     }
 
     /*@PostMapping("/createTravel")
