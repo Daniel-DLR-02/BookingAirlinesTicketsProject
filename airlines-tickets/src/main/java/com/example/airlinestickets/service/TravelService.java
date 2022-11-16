@@ -8,6 +8,8 @@ public interface TravelService {
 
     List<String> getDestinations(List<String> origins);
 
+    List<Travel> getAllTravels();
+
     Travel saveTravel(Travel travel);
     
 }

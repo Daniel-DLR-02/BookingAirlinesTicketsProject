@@ -11,6 +11,7 @@ import com.example.airlinestickets.service.TravellerService;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDate;
+import java.util.Date;
 
 @RequiredArgsConstructor
 @Component
@@ -39,6 +40,7 @@ public class InitData {
         .scales("dubai")
         .whether("rainy")
         .schedule("3:30-4:30")
+        .travelDate(new Date(2022,12,16))
         .build();
         
         travelService.saveTravel(travel);

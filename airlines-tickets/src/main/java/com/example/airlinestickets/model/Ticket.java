@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -31,8 +32,10 @@ public class Ticket {
     
     private String destination;
     private String origin;
-    private Date date;
     @OneToOne
     private Traveller traveller;
+
+    @ManyToOne
+    private Travel travel;
     
 }
