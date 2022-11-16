@@ -76,7 +76,7 @@ public class TravelServiceTest {
             travelService.getDestinations(destinos4);
         });
     }
-    
+
     /*
     @Test
     void whenQueryOfDayIsDone_ReturnTravelsWithThreedaysOfDifference(){
