@@ -10,11 +10,15 @@ import TypeOfTrip from "./components/TypeOfTrip";
 function App() {
   
   const [ originFormVisible, setOriginFormVisible ] = useState(true);
+  const [ originColl, setOriginColl ] = useState([]);
+
+
   const [ destinationCollVisible, setDestinationCollVisible ] = useState(false);
   const [ typeOfTrip, setTypeOfTrip ] = useState(false);
  
-  const outputDestination = () => {
+  const outputDestination = ( origins ) => {
 
+    setOriginColl(origins)
     setOriginFormVisible(false)
     setDestinationCollVisible(true)
 
@@ -34,7 +38,7 @@ function App() {
         <OriginForm outputDestination={outputDestination} /> 
 
         { destinationCollVisible && (
-          <PossibleDestinations showTypeOfTrip={showTypeOfTrip} />
+          <PossibleDestinations showTypeOfTrip={showTypeOfTrip} originColl={originColl} />
         )}
 
         { typeOfTrip && (
