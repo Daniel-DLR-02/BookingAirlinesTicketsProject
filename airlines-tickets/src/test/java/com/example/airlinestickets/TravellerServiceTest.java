@@ -8,6 +8,7 @@ import com.example.airlinestickets.model.Traveller;
 
 @SpringBootTest
 public class TravellerServiceTest {
+
     static Traveller traveller;
     // static TravellerDataValidator dataValidator;
 
@@ -40,5 +41,5 @@ public class TravellerServiceTest {
 	void validationTravellerAge() {
         assertNotNull(dataValidator.age(traveller.getAge()), "El viajero tiene que tener una edad valida");
 	}*/
-    
+
 }

@@ -26,6 +26,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TravelServiceTest {
 
 
+
     static ArrayList<String> destinos5 = new ArrayList<>();
     static ArrayList<String> destinos4 = new ArrayList<>();
 
