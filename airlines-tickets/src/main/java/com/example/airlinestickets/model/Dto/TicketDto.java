@@ -1,5 +1,6 @@
 package com.example.airlinestickets.model.Dto;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -20,5 +21,5 @@ public class TicketDto {
     String destination;
     String airlineName;
     String schedule;
-    Date travelDate;
+    LocalDate travelDate;
 }

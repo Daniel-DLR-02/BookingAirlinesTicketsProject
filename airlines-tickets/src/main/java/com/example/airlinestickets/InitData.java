@@ -30,7 +30,6 @@ public class InitData {
         .age(20)
         .build();
 
-        travellerService.saveTraveller(traveller);
 
 
         Travel travel = Travel.builder()
@@ -40,10 +39,54 @@ public class InitData {
         .scales("dubai")
         .whether("rainy")
         .schedule("3:30-4:30")
-        .travelDate(new Date(2022,12,16))
+        .travelDate(LocalDate.of(2022,12,16))
         .build();
         
         travelService.saveTravel(travel);
+        Travel travel1 = Travel.builder()
+                .airlineName("Iberia").
+                departLocation("Madrid")
+                .destinyLocation("Barcelona")
+                .travelType("return")
+                .scales("dubai")
+                .whether("rainy")
+                .schedule("3:30-4:30")
+                .travelDate(LocalDate.of(2022,12,16))
+                .build();
+
+        travelService.saveTravel(travel);
+
+        Travel travel2 = Travel.builder()
+                .airlineName("Iberia").
+                departLocation("Berlin")
+                .destinyLocation("Atenas")
+                .scales("dubai")
+                .whether("rainy")
+                .schedule("3:30-4:30")
+                .travelDate(LocalDate.of(2022,12,16))
+                .build();
+
+        travelService.saveTravel(travel);
+
+        Travel travel3 = Travel.builder()
+                .airlineName("Iberia").
+                departLocation("Oporto")
+                .destinyLocation("Malaga")
+                .scales("dubai")
+                .whether("rainy")
+                .travelType("return")
+                .schedule("3:30-4:30")
+                .travelDate(LocalDate.of(2022,12,16))
+                .build();
+
+        travelService.saveTravel(travel);
+        travelService.saveTravel(travel1);
+        travelService.saveTravel(travel2);
+        travelService.saveTravel(travel3);
+
+
+
+
 
         //INSERT INTO ESTACION(ID,FECHA_APERTURA,PRECIO_GASOIL95OCTANOS,PRECIO_GASOIL_ESPECIAL,PRECIO_GASOIL_NORMAL,PRECIO_GASOLINA98,SERVICIOS,TIENE_AUTOLAVADO,UBICACION)
         //       VALUES (1,null,5.0,null,3.0,null,null,null,null);

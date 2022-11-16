@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.airlinestickets.exeptions.NotEnoughtDestinationsException;
+import com.example.airlinestickets.model.Dto.TravelFilterQuery;
 import org.springframework.stereotype.Service;
 
 import com.example.airlinestickets.model.Travel;
@@ -49,6 +50,11 @@ public class TravelServiceImpl implements TravelService {
     @Override
     public List<String> getPosibleOrigins() {
         return travelRepos.getAllOrigins();
+    }
+
+    @Override
+    public List<Travel> filterTravels(TravelFilterQuery travelQuery) {
+        return travelRepos.filterTravelsByFilterTravelQuery(travelQuery);
     }
 
 }
